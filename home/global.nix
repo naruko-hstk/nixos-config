@@ -9,7 +9,7 @@
     profileExtra = ''
       [ -f ~/.zprofile.local ] && source ~/.zprofile.local
     '';
-    initExtra = ''
+    initContent = ''
       [ -f ~/.zshrc.local ] && source ~/.zshrc.local
     '';
     enableCompletion = false;
@@ -24,7 +24,7 @@
 
   programs.git = {
     enable = true;
-    extraConfig = {
+    settings = {
       init.defaultBranch = "master";
       pull.rebase = true;
     };
