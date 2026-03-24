@@ -24,10 +24,14 @@
   programs.git = {
     enable = true;
     extraConfig = {
-      init.defaultBranch = "main";
+      init.defaultBranch = "master";
       pull.rebase = true;
     };
   };
 
   programs.fastfetch.enable = true;
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
 }
