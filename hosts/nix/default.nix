@@ -33,6 +33,8 @@
     neovim
     zsh
     eza
+    gnupg
+    pinentry-curses
   ];
 
   programs.neovim.defaultEditor = true;
