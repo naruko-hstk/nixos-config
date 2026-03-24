@@ -41,5 +41,9 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  environment.pathsToLink = [ "/share/zsh" ];
+
+  programs.zsh.enableCompletion = false;
+
   system.stateVersion = "25.11";
 }

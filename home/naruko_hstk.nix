@@ -24,6 +24,7 @@
     initExtra = ''
       [ -f ~/.zshrc.local ] && source ~/.zshrc.local
     '';
+    enableCompletion = false;
   };
 
   programs.git = {
@@ -33,6 +34,5 @@
       key = "BCAFDD3A59626911612C8238787FCE0CAB1551FD";
       signByDefault = true;
     };
-};
-
+  };
 }

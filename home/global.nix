@@ -12,6 +12,7 @@
     initExtra = ''
       [ -f ~/.zshrc.local ] && source ~/.zshrc.local
     '';
+    enableCompletion = false;
   };
 
   programs.neovim = {
