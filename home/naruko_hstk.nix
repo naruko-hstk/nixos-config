@@ -13,6 +13,7 @@
     rustup
     go
     kotlin
+    starship
   ];
 
   programs.zsh = {
