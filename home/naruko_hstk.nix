@@ -30,12 +30,14 @@
 
   programs.git = {
     settings = {
-      userName = "naruko-hstk";
-      userEmail = "naruko@naruko.studio";
-      signing = {
-        key = "BCAFDD3A59626911612C8238787FCE0CAB1551FD";
-        signByDefault = true;
+      user = {
+        name = "naruko-hstk";
+        email = "naruko@naruko.studio";
       };
+    };
+    signing = {
+      key = "BCAFDD3A59626911612C8238787FCE0CAB1551FD";
+      signByDefault = true;
     };
   };
 }
