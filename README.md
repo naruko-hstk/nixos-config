@@ -49,7 +49,7 @@ mount -o subvol=@home,compress=zstd,noatime,space_cache=v2,discard=async /dev/sd
 mount -o subvol=@nix,compress=zstd,noatime,space_cache=v2,discard=async /dev/sdX2 /mnt/nix # or /dev/nvmeXnYp2
 mount -o subvol=@snapshots,compress=zstd,noatime,space_cache=v2,discard=async /dev/sdX2 /mnt/.snapshots # or /dev/nvmeXnYp2
 swapon /dev/sdX3 # or /dev/nvmeXnYp3, if have home volume on your disk /dev/sdX4 or /dev/nvmeXnYp4
-mount -o uid=0,gid=0,fmask=0177,dmask=0077,noatime,noexec,nodev,nosuid,errors=remount-ro,space_cache=v2,discard=async /dev/sdX1 /mnt/boot/efi # or /dev/nvmeXnYp1, if legacy bios use /mnt/boot instead /mnt/boot/efi
+mount -o uid=0,gid=0,fmask=0177,dmask=0077,noatime,noexec,nodev,nosuid,errors=remount-ro /dev/sdX1 /mnt/boot/efi # or /dev/nvmeXnYp1, if legacy bios use /mnt/boot instead /mnt/boot/efi
 nixos-generate-config --root /mnt
 mv /mnt/etc/nixos /mnt/etc/nixos-bak
 git clone https://github.com/naruko-hstk/nixos-config /mnt/etc/nixos
