@@ -55,6 +55,7 @@ mv /mnt/etc/nixos /mnt/etc/nixos-bak
 git clone https://github.com/naruko-hstk/nixos-config /mnt/etc/nixos
 mv /mnt/etc/nixos-bak/hardware-configuration.nix /mnt/etc/nixos/hosts/<hostname>/
 git add -f /mnt/etc/nixos/hosts/<hostname>/hardware-configuration.nix # if issue#15544 in NixOS/nix(https://github.com/NixOS/nix/issues/15544) complete can skip it.
+vim /mnt/etc/nixos/hosts/<hostname>/hardware-configuration.nix # add '"compress=zstd" "noatime" "space_cache=v2" "discard=async"' to options which fsType = "btrfs"
 nixos-install --no-root-passwd --flake /mnt/etc/nixos#<your.host.fqdn>
 reboot
 ```
